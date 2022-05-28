@@ -13,10 +13,7 @@ const Banner = () => {
         <img src="" alt="Pizza" />
       </div>
       <div className="carousel-item">
-        <img
-          src="https://api.lorem.space/image/pizza?w=400&h=300&hash=9D9539E7"
-          alt="Pizza"
-        />
+        <img src="https://i.ibb.co/64gYqYk/download.jpg" alt="Pizza" />
       </div>
       <div className="carousel-item">
         <img
