@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
+  fetch("");
   return (
     <div>
       <div className="card w-96 bg-base-100 shadow-xl">
