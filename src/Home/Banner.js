@@ -5,15 +5,12 @@ const Banner = () => {
     <div className="carousel carousel-center rounded-box my-6">
       <div className="carousel-item">
         <img
-          src="https://api.lorem.space/image/pizza?w=400&h=300&hash=8B7BCDC2"
+          src="https://i.ibb.co/vqJSPNZ/stock-vector-computer-parts-isometric-set-inside-the-computer-case-hardware-elements-hard-disk-drive.jpg"
           alt="Pizza"
         />
       </div>
       <div className="carousel-item">
-        <img
-          src="https://api.lorem.space/image/pizza?w=400&h=300&hash=225E6693"
-          alt="Pizza"
-        />
+        <img src="" alt="Pizza" />
       </div>
       <div className="carousel-item">
         <img
