@@ -26,7 +26,6 @@ const AllUser = () => {
         <table class="table w-full">
           <thead>
             <tr>
-              <th> User Name</th>
               <th>Email</th>
               <th>Make Admin</th>
             </tr>

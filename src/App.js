@@ -37,7 +37,11 @@ function App() {
           }
         ></Route>
         <Route path="/dashboard" element={<Dashboard></Dashboard>}>
-          <Route index element={<MyOrders></MyOrders>}></Route>
+          <Route index element={<MyProfile></MyProfile>}></Route>
+          <Route
+            path="/dashboard/myorders"
+            element={<MyOrders></MyOrders>}
+          ></Route>
           <Route
             path="/dashboard/userReviews"
             element={<UserReviews></UserReviews>}
@@ -46,10 +50,7 @@ function App() {
             path="/dashboard/userProfile"
             element={<UserProfile></UserProfile>}
           ></Route>
-          <Route
-            path="/dashboard/myProfile"
-            element={<MyProfile></MyProfile>}
-          ></Route>
+
           <Route
             path="/dashboard/manageAlloders"
             element={<ManageOrders></ManageOrders>}

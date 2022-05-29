@@ -4,6 +4,7 @@ import { toast, ToastContainer } from "react-toastify";
 const MakeAdmin = ({ user, refetch }) => {
   const { email, role } = user;
   const makeAdmin = () => {
+    alert("clicked");
     fetch(`http://localhost:5000/user/admin/${email}`, {
       method: "PUT",
       headers: {
@@ -17,6 +18,7 @@ const MakeAdmin = ({ user, refetch }) => {
         res.json();
       })
       .then((data) => {
+        console.log(data);
         if (data.modifiedCount > 0) {
           refetch();
           toast.success("Successfully Make An Admin");
@@ -32,9 +34,6 @@ const MakeAdmin = ({ user, refetch }) => {
             Make Admin
           </button>
         )}
-      </td>
-      <td>
-        <button class="btn btn-xs">Delete User</button>
       </td>
     </tr>
   );

@@ -22,8 +22,7 @@ const LogIn = () => {
   } = useForm();
   const [token] = useToken(user || gUser);
   let signInError;
-  let from =
-    location.state?.from?.pathname || navigate("/dashboard/userProfile");
+  let from = location.state?.from?.pathname || navigate("/");
   // if true|| loading it will loading all the time
   useEffect(() => {
     if (loading || gLoading) {

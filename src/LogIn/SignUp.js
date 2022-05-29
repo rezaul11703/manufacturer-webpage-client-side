@@ -27,7 +27,6 @@ const SignUp = () => {
   let signInError;
   if (token) {
     alert("Registration Successful");
-    navigate("/dashboard/userProfile");
   }
   if (loading || gLoading || updating) {
     return <Loading></Loading>;
@@ -38,6 +37,7 @@ const SignUp = () => {
   const handleSignUp = async (data) => {
     await createUserWithEmailAndPassword(data.email, data.password);
     await updateProfile({ displayName: data.name });
+    navigate("/dashboard");
   };
   return (
     <div className="flex justify-center align-center h-screen ">

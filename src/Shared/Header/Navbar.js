@@ -69,7 +69,7 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <Link to="/" className="btn btn-ghost normal-case text-xl">
+          <Link to="/" className="btn btn-ghost normal-case text-xl mr-5px">
             Computer Parts Corner
           </Link>
         </div>

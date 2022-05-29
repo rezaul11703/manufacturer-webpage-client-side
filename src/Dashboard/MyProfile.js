@@ -3,6 +3,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../firebase.init";
+import Loading from "../Shared/Loading";
 
 const MyProfile = () => {
   const [user, loading] = useAuthState(auth);
@@ -11,6 +12,9 @@ const MyProfile = () => {
     register,
     formState: { errors },
   } = useForm();
+  if (loading) {
+    return <Loading></Loading>;
+  }
   const handleSeedetails = () => {
     navigate("/dashboard/seeDetails");
   };
