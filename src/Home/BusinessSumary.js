@@ -61,15 +61,6 @@ const BusinessSumary = () => {
           <div className="stat-desc">21% more than last month</div>
         </div>
       </div>
-      <div className="mt-6">
-        <form>
-          <input
-            type="email"
-            placeholder="Enter Your Email "
-            className="input input-bordered w-full max-w-xs"
-          />
-        </form>
-      </div>
     </div>
   );
 };

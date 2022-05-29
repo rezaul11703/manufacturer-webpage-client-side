@@ -20,7 +20,8 @@ const Items = () => {
 
   return (
     <div>
-      <div className="grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4">
+      <h2 className="text-4xl my-2"> Items We have</h2>
+      <div className="grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-1">
         {items.map((item) => (
           <Itam key={item._id} item={item}></Itam>
         ))}

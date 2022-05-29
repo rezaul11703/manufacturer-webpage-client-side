@@ -7,7 +7,7 @@ const Itam = ({ item }) => {
     navigate(`/purchase/${item._id}`);
   };
   return (
-    <div className="card w-96 bg-base-100 shadow-xl  my-6 ">
+    <div className="card w-96 bg-base-100 shadow-xl my-2">
       <figure>
         <img src={item.productImage} alt="Shoes" />
       </figure>

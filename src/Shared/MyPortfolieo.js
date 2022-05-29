@@ -10,15 +10,9 @@ const MyPortfolieo = () => {
         </div>
         <div class="overflow-x-auto">
           <table class="table w-full">
-            <th>
-              name, email address, educational background, list of technologies
-              or skills you have as a web developer
-            </th>
-            <th>Job</th>
-
             <tbody>
               <tr>
-                <th>Name,</th>
+                <th>Name</th>
                 <td>Md. Rezaul Karim </td>
               </tr>
               <tr>
