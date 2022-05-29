@@ -11,7 +11,9 @@ const MyOrders = () => {
   const [user, loading] = useAuthState(auth);
   const [users, setUsers] = useState([]);
   useEffect(() => {
-    fetch(`https://computer-part.herokuapp.com/userCart/${user.email}`)
+    fetch(
+      `https://computer-parts-solution-80c80.web.app/userCart/${user.email}`
+    )
       .then((res) => res.json())
       .then((data) => setUsers(data));
   }, [users]);
@@ -27,9 +29,12 @@ const MyOrders = () => {
         {
           label: "Yes",
           onClick: () => {
-            fetch(`https://computer-part.herokuapp.com/userCart/${id}`, {
-              method: "Delete",
-            })
+            fetch(
+              `https://computer-parts-solution-80c80.web.app/userCart/${id}`,
+              {
+                method: "Delete",
+              }
+            )
               .then((res) => res.json())
               .then((data) => {
                 if (data.deletedCount > 0) {

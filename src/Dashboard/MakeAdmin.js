@@ -5,7 +5,7 @@ const MakeAdmin = ({ user, refetch }) => {
   const { email, role } = user;
   const makeAdmin = () => {
     alert("clicked");
-    fetch(`https://computer-part.herokuapp.com/user/admin/${email}`, {
+    fetch(`https://computer-parts-solution-80c80.web.app/user/admin/${email}`, {
       method: "PUT",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

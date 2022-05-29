@@ -11,8 +11,8 @@ const Items = () => {
     error,
     data: items,
   } = useQuery("items", () =>
-    fetch("https://computer-part.herokuapp.com/addItems").then((res) =>
-      res.json()
+    fetch("https://computer-parts-solution-80c80.web.app/addItems").then(
+      (res) => res.json()
     )
   );
 
