@@ -11,7 +11,7 @@ const MyOrders = () => {
   const [user, loading] = useAuthState(auth);
   const [users, setUsers] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/userCart/${user.email}`)
+    fetch(`https://computer-part.herokuapp.com/userCart/${user.email}`)
       .then((res) => res.json())
       .then((data) => setUsers(data));
   }, [users]);
@@ -27,7 +27,7 @@ const MyOrders = () => {
         {
           label: "Yes",
           onClick: () => {
-            fetch(`http://localhost:5000/userCart/${id}`, {
+            fetch(`https://computer-part.herokuapp.com/userCart/${id}`, {
               method: "Delete",
             })
               .then((res) => res.json())

@@ -11,7 +11,9 @@ const Items = () => {
     error,
     data: items,
   } = useQuery("items", () =>
-    fetch("http://localhost:5000/addItems").then((res) => res.json())
+    fetch("https://computer-part.herokuapp.com/addItems").then((res) =>
+      res.json()
+    )
   );
 
   if (isLoading) {

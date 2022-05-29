@@ -11,7 +11,7 @@ const AddProduct = () => {
     formState: { errors },
   } = useForm();
   const AddProduct = (data) => {
-    fetch("http://localhost:5000/addedItems", {
+    fetch("https://computer-part.herokuapp.com/addedItems", {
       method: "POST",
       headers: {
         "content-type": "application/json",

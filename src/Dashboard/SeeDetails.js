@@ -12,7 +12,7 @@ const SeeDetails = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  fetch(`http://localhost:5000/userProfile`, {
+  fetch(`https://computer-part.herokuapp.com/userProfile`, {
     method: "GET",
     headers: {
       "content-type": "application/json",

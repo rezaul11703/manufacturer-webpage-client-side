@@ -23,7 +23,7 @@ const UserProfile = () => {
       number: data.phonenumber,
       link: data.profileLink,
     };
-    fetch(`http://localhost:5000/userProfile`, {
+    fetch(`https://computer-part.herokuapp.com/userProfile`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

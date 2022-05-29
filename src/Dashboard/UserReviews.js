@@ -14,7 +14,7 @@ const UserReviews = () => {
       reviewersRating: data.ratings,
       reviewersFeelings: data.customerFeedBack,
     };
-    fetch("http://localhost:5000/userReviews", {
+    fetch("https://computer-part.herokuapp.com/userReviews", {
       method: "POST",
       headers: {
         "content-type": "application/json",

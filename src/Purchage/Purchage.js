@@ -24,7 +24,9 @@ const Purchage = () => {
     error,
     data: items,
   } = useQuery("items", () =>
-    fetch(`http://localhost:5000/purchase/${id}`).then((res) => res.json())
+    fetch(`https://computer-part.herokuapp.com/purchase/${id}`).then((res) =>
+      res.json()
+    )
   );
   let signInError;
   if (isLoading || loading) {
@@ -47,7 +49,7 @@ const Purchage = () => {
       netPrice: totalPrice,
     };
 
-    fetch("http://localhost:5000/userCart", {
+    fetch("https://computer-part.herokuapp.com/userCart", {
       method: "POST",
       headers: {
         "content-type": "application/json",
