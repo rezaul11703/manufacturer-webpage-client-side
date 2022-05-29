@@ -1,5 +1,5 @@
 Website Name : Computer Parts Corner
-type: client Site
+type: https://computer-parts-corner.herokuapp.com/
 
 # liveLink:
 

@@ -12,7 +12,7 @@ const SeeDetails = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  fetch(`https://computer-parts-solution-80c80.web.app/userProfile`, {
+  fetch(`https://computer-parts-corner.herokuapp.com/userProfile`, {
     method: "GET",
     headers: {
       "content-type": "application/json",

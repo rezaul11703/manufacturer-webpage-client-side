@@ -24,7 +24,7 @@ const Purchage = () => {
     error,
     data: items,
   } = useQuery("items", () =>
-    fetch(`https://computer-parts-solution-80c80.web.app/purchase/${id}`).then(
+    fetch(`https://computer-parts-corner.herokuapp.com/purchase/${id}`).then(
       (res) => res.json()
     )
   );
@@ -49,7 +49,7 @@ const Purchage = () => {
       netPrice: totalPrice,
     };
 
-    fetch("https://computer-parts-solution-80c80.web.app/userCart", {
+    fetch("https://computer-parts-corner.herokuapp.com/userCart", {
       method: "POST",
       headers: {
         "content-type": "application/json",

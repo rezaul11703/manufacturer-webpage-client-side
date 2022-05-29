@@ -14,7 +14,7 @@ const UserReviews = () => {
       reviewersRating: data.ratings,
       reviewersFeelings: data.customerFeedBack,
     };
-    fetch("https://computer-parts-solution-80c80.web.app/userReviews", {
+    fetch("https://computer-parts-corner.herokuapp.com/userReviews", {
       method: "POST",
       headers: {
         "content-type": "application/json",

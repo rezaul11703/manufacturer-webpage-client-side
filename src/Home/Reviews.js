@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
-  fetch("https://computer-parts-solution-80c80.web.app/userReviews")
+  fetch("https://computer-parts-corner.herokuapp.com/userReviews")
     .then((res) => res.json())
     .then((data) => setReviews(data));
   return (
