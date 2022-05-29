@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { confirmAlert } from "react-confirm-alert";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useQuery } from "react-query";
@@ -8,18 +8,15 @@ import "react-confirm-alert/src/react-confirm-alert.css";
 import Loading from "../Shared/Loading";
 
 const MyOrders = () => {
-  const [user] = useAuthState(auth);
-  const {
-    isLoading,
-    error,
-    data: users,
-  } = useQuery("users", () =>
-    fetch(`http://localhost:5000/userCart/${user.email}`).then((res) =>
-      res.json()
-    )
-  );
+  const [user, loading] = useAuthState(auth);
+  const [users, setUsers] = useState([]);
+  useEffect(() => {
+    fetch(`http://localhost:5000/userCart/${user.email}`)
+      .then((res) => res.json())
+      .then((data) => setUsers(data));
+  }, [users]);
 
-  if (isLoading) {
+  if (loading) {
     return <Loading></Loading>;
   }
   const handleButton = ({ id }) => {
@@ -30,26 +27,16 @@ const MyOrders = () => {
         {
           label: "Yes",
           onClick: () => {
-            // const {
-            //   isLoading1,
-            //   error1,
-            //   data: remainUser,
-            // } = useQuery("remainUsers", () =>
-            //   fetch(`http://localhost:5000/userCart/${id}`, {
-            //     method: "Delete",
-            //   }).then((res) => res.json())
-            // );
-            // const url = `https://stark-beyond-11447.herokuapp.com/inventory/${id}`;
-            // fetch(url, {
-            //   method: "DELETE",
-            // })
-            //   .then((res) => res.json())
-            //   .then((data) => {
-            //     if (data.deletedCount > 0) {
-            //       const remainItem = users.filter((user) => user._id !== id);
-            //       setCarts(remainItem);
-            //     }
-            //   });
+            fetch(`http://localhost:5000/userCart/${id}`, {
+              method: "Delete",
+            })
+              .then((res) => res.json())
+              .then((data) => {
+                if (data.deletedCount > 0) {
+                  const remainItem = users.filter((item) => item._id !== id);
+                  setUsers(remainItem);
+                }
+              });
           },
         },
         {

@@ -9,7 +9,7 @@ const Reviews = () => {
     <div>
       {reviews.map((r) => (
         <div className="card w-96 bg-base-100 shadow-xl">
-          <h2 className="card-title"> Reviewer NAme :{r.reviewersName}</h2>
+          <h2 className="card-title mx-auto"> {r.reviewersName}</h2>
           <p>Rating :{r.reviewersRating}</p>
           <p> Comment :{r.reviewersFeelings} </p>
           <div className="card-actions"></div>
