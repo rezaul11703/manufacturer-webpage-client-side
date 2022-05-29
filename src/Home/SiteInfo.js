@@ -6,12 +6,12 @@ const SiteInfo = () => {
       <div class="hero-content flex-col lg:flex-row">
         <img src="https://i.ibb.co/64gYqYk/download.jpg" />
         <div>
-          <h1 class="text-5xl font-bold">About Us</h1>
-          <p class="py-6">
+          <h1 class="text-2xl font-bold">About Us</h1>
+          <span class="p-4 text-center">
             We Provide Best Quality computer parts with demand and delivered
             with in a time . We have some minimum ordered items . So just
             Explore it !!! Hope a good journey with Us{" "}
-          </p>
+          </span>
         </div>
       </div>
     </div>
