@@ -1,7 +1,7 @@
 Website Name : Computer Parts Corner
-type: https://computer-parts-corner.herokuapp.com/
+type: client Site
 
-# liveLink:
+# liveLink: https://computer-parts-solution-80c80.web.app/
 
 # Used Technology
 
