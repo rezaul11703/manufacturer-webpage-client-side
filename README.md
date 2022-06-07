@@ -1,4 +1,4 @@
-Website Name : Computer Parts Corner
+Website Name : Computer Parts Solution
 type: client Site
 
 # liveLink: https://computer-parts-solution-80c80.web.app/
